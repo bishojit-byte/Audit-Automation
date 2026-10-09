@@ -4,9 +4,10 @@ Enterprise Quality Control, Auto Data Synchronization, and Dual Audit Control Ec
 
 ---
 
-## 📘 Complete System Workflow Documentation
+## 🎓 User Training Manual & Workflow Guides
 
-👉 **[সম্পূর্ণ কাজের বিবরণ ও ওয়ার্কফ্লো গাইড দেখতে এখানে ক্লিক করুন (WORKFLOW_GUIDE.md)](WORKFLOW_GUIDE.md)**
+- 📘 **[ব্যবহারকারী ও টিম ট্রেনিং ম্যানুয়াল (USER_TRAINING_GUIDE.md)](USER_TRAINING_GUIDE.md)** — Management, SM/ASM, QC Auditors, and Photoshop Designers training guide.
+- ⚙️ **[সম্পূর্ণ কাজের বিবরণ ও টেকনিক্যাল গাইড (WORKFLOW_GUIDE.md)](WORKFLOW_GUIDE.md)** — End-to-end operational architecture breakdown.
 
 ---
 
@@ -30,29 +31,22 @@ flowchart TD
 
 ---
 
-## 🚀 Key Modules Included
+## 🚀 Key User Roles & Modules
 
-1. **Central Data Hub & Sync Engine (`SyncControlBar.jsx`):**
-   - Integrates with Tista Job Management REST API and Google Sheets API.
-   - Includes a real-time **Sync ON / Sync OFF Toggle Switch** with pending queue management.
-
-2. **Photoshop UXP Smart QC Panel (`uxp-plugin/` & `PhotoshopQCSimulator.jsx`):**
-   - Adobe Photoshop Desktop Extension.
-   - 100% Automated Technical Inspection: DPI (300 DPI), Color Mode (RGB), Dimensions, Clipping Path (`Path 1`), Pure White `#FFFFFF` Background sampling, and Layer structure checks.
+1. **Photoshop Designers & Editors (`uxp-plugin/` & `PhotoshopQCSimulator.jsx`):**
+   - 100% Automated Technical Inspection: DPI (300 DPI), Color Mode (RGB), Dimensions, Clipping Path (`Path 1`), Pure White `#FFFFFF` Background, and Layer structure checks.
    - **Enforced File Locking:** Prevents completing or uploading edited files to Dropbox until 100% of technical rules and dynamic instructions are checked off.
 
-3. **Quality Audit Report Portal (`QualityAuditReport.jsx`):**
+2. **1st & 2nd Layer QC Auditors (`QualityAuditReport.jsx` & `CategoryAccuracyReport.jsx`):**
    - **All Vendor Summary Table:** Total Order Collect, Audit Quantity, Audit %.
    - **Individual Auditor Performance Table:** Auditor Name, Checked Order Qty, Check %, Found Fault Qty.
    - **Path Quality Audit Insight Table:** Locations/Vendors, Checked Order Qty, Fault Order Qty, Fault Order %, Checked Service Qty, Fault Service Qty, Fault Service %.
-   - **Weekly Quality Audit Comparison Table:** Week-over-Week trend analysis.
+   - **Service & Category Accuracy Table:** Service Mismatches, Category Differences (High/Low Diff), and SM/ASM performance tracking.
 
-4. **Service & Category Accuracy Report Portal (`CategoryAccuracyReport.jsx`):**
-   - **Master Summary:** Total Order Collect, Correct Order, Wrong Entry, Service Mismatches (Wrong Service, Service Missing), Category Differences (High Diff, Low Diff), Note Issue.
-   - **Individual Lead Performance (SM / ASM):** Detailed breakdown per team lead.
-   - **Weekly Comparison Table:** Category and Service Mismatch reduction trends.
+3. **Production Leads SM / ASM & Managers (`SyncControlBar.jsx`):**
+   - Real-time **Sync ON / Sync OFF Toggle Switch** for Google Sheets API integration.
 
-5. **Automated Vendor Email & Slide Deck Generator (`VendorEmailGenerator.jsx`):**
+4. **Top Management & Executives (`VendorEmailGenerator.jsx`):**
    - Generates 16:9 HD performance slide decks per vendor.
    - Calculates chargeback deductions ($4.50/fault) and dispatches automated audit statement emails.
 
@@ -105,7 +99,8 @@ npm run build
 │   ├── index.html
 │   ├── main.js
 │   └── styles.css
-├── WORKFLOW_GUIDE.md       # Complete Bengali/English Operational Workflow Guide
+├── USER_TRAINING_GUIDE.md  # Role-based User & Team Training Manual
+├── WORKFLOW_GUIDE.md       # Complete Operational Workflow Breakdown
 └── README.md
 ```
 
