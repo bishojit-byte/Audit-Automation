@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="panel-container">
+    <h2>PixelFlow QC Locker</h2>
+    <div class="input-group">
+      <input id="order-id-input" placeholder="Enter Order ID (e.g. ORD-9824)" />
+      <button id="btn-fetch-order">Fetch Specs</button>
+    </div>
+
+    <div id="tech-inspection-results">
+      <h3>Auto Technical Checks</h3>
+      <ul id="tech-list"></ul>
+    </div>
+
+    <div id="instruction-checklist">
+      <h3>Instruction Checklist</h3>
+      <div id="checklist-items"></div>
+    </div>
+
+    <button id="btn-complete-order" disabled>QC Locked</button>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>

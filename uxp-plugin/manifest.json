@@ -1,0 +1,23 @@
+{
+  "id": "com.pixelflow.smartqc",
+  "name": "PixelFlow Smart Order QC & File Locker",
+  "version": "1.0.0",
+  "main": "index.html",
+  "manifestVersion": 4,
+  "entrypoints": [
+    {
+      "type": "panel",
+      "id": "smartqcPanel",
+      "label": { "default": "Smart QC Locker" },
+      "minimumSize": { "width": 300, "height": 450 },
+      "preferredDockedSize": { "width": 350, "height": 600 }
+    }
+  ],
+  "host": [
+    { "app": "PS", "minVersion": "23.0.0" }
+  ],
+  "requiredPermissions": {
+    "network": { "domains": ["all"] },
+    "localFileSystem": "fullAccess"
+  }
+}

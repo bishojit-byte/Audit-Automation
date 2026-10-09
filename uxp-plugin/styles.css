@@ -1,0 +1,23 @@
+body {
+  font-family: system-ui, sans-serif;
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+  padding: 12px;
+}
+.panel-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+button {
+  background: #007acc;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+button:disabled {
+  background: #444;
+  cursor: not-allowed;
+}
